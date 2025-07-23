@@ -1,0 +1,232 @@
+%Capitulo1
+
+\chapter{Fibras ópticas}
+
+La posibilidad de la conducción guiada de la luz, se demostró hace más de un siglo. En 1870 Tyndall demostró que la luz podía ser conducida dentro de un chorro de agua. El método usado fue bastante rudimentario, aunque explicativo; como fuente de luz utilizó una lámpara de aceite y como guía, un chorro de agua: él colocó la lámpara en el interior de un barril lleno de agua, en el que previamente hizo un agujero en un lateral cercano a la base, de esta forma, la luz se mantenía dentro del chorro con forma parabólica que salía del barril [1].\\
+
+A principios del siglo pasado, se hicieron los primeros intentos de fabricación de una guía de onda estable para la luz. Se propuso una barra de material dieléctrico transparente: vidrio, pero la estructura era muy frágil y además las pérdidas de potencia óptica eran muy altas. A pesar de esto, se mantuvo el interés por este fenómeno, debido a sus posibles aplicaciones en el campo de la medicina: endoscopía, y se llegó a la conclusión de que la estructura adecuada para servir como guía de onda, era una estructura con un material dieléctrico con índice de refracción $n_1$ rodeado de un material de menor índice de refracción $n_2$. La envoltura realiza una función estructural y de reducción de pérdidas de la onda guiada.\\
+
+La estructura antes mencionada dio lugar a lo que actualmente se conoce como fibra óptica, la cual, en 1966 se propuso usarla como medio de comunicación. En aquel momento era algo puramente teórico, ya que las pérdidas de las primeras fibras eran del orden de 1000 dB/Km [1], cifra que se fue reduciendo con el paso de los años con la mejora en los materiales de fabricación. A finales del siglo XX, surgieron dos grandes avances que aumentaron de forma drástica la capacidad de transmisión de datos por fibra óptica, estos fueron: el \textbf{amplificador de fibra óptica dopada con erbio} (\textit{Erbium Doped Fiber Amplifier} o EDFA), que permite regenerar una señal atenuada; y los \textbf{sistemas WDM} (\textit{Wavelength Division Multiplexing}), en los cuales se pueden transmitir varias señales en paralelo en una misma fibra óptica, cada señal modulada independientemente con diferente flujo de datos y sin perder su individualidad. Hoy día, se han demostrado transmisiones del orden de Tera bits por segundo (Tbps) [2] y fibras con pérdidas menores a 0.25 dB/km, donde la señal puede viajar hasta 100 km sin necesidad de repetidores [3].\\
+
+
+Esto hace que las fibras ópticas actualmente estén reemplazando a los cables coaxiales de cobre, como el medio preferido de transmisión para ondas electromagnéticas y revolucionando las comunicaciones terrestres.\\
+
+Algunas de sus propiedades sobresalientes, se resumen a continuación [4]:
+\begin{itemize}
+\item Elevado ancho de banda, lo cual permite una gran capacidad de transmisión de información.
+\item Reducido valor de atenuación de las señales que se propagan a través de la fibra. En consecuencia, la separación entre los repetidores de una línea de transmisión puede ser de decenas de km.
+\item Es liviana y flexible debido a su pequeño diámetro.
+\item Se eliminan los problemas de interferencia entre fibras adyacentes, así como la intercepción de la señal.
+\item La interferencia electromagnética no tiene efecto en la señal óptica.
+\item Las características de transmisión de las guías de onda varían levemente con la temperatura. Por lo tanto, no se requieren compensación de temperatura, como la que se emplea en los cables de cobre.
+\item La materia prima utilizada en la fabricación de fibra óptica, el dióxido de silicio ($SiO_2$), es uno de los más abundantes en la superficie terrestre.
+\end{itemize}
+
+\section{Estructura}
+
+La estructura de la fibra óptica es bastante simple, se compone principalmente de tres partes: núcleo, recubrimiento y revestimiento primario (Figura \ref{img:estructura}).
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.475]{Capitulo1/1.png}
+\caption {Estructura de una fibra óptica. \textbf{(a)} sección transversal y \textbf{(b)} sección longitudinal. [5]}
+\label{img:estructura}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Núcleo}: está formado por un cilindro de vidrio fabricado con dióxido de silicio ($SiO_2$), el cual es casi transparente en el espectro visible y el infrarrojo cercano, y es por donde viaja la señal óptica. Su diámetro va de 8 a 62.5 $\mu$m, dependiendo del tipo de fibra óptica.
+\item \textbf{Recubrimiento}: es un tubo coaxial con el núcleo, en estrecho contacto con él. Está fabricado con $SiO_2$ de distinta densidad óptica que el del núcleo, es decir, su índice de refracción es ligeramente menor y su función es asegurar la conducción de luz en el interior del núcleo. Su diámetro es de 125 $\mu$m.
+\item \textbf{Revestimiento primario}: capa de material plástico que reviste a la fibra óptica, es la primera línea de protección mecánica del núcleo y del recubrimiento. Su diámetro es de aproximadamente 250 $\mu$m.
+\end{itemize}
+
+\section{Principio de propagación de la luz en una fibra óptica}
+Un análisis elemental de los conceptos de transmisión por fibra óptica, puede abordarse sin tener en cuenta que la luz es una onda electromagnética, es decir, utilizando las leyes de la óptica geométrica. Esto es, haciendo uso de rayos en lugar de ondas para representar la progresión de la luz.  Un rayo es una línea dibujada en el espacio, que corresponde a la dirección del flujo de energía radiante. En un medio uniforme los rayos son rectos y perpendiculares a los frentes de onda [5], como se muestra en la Figura \ref{img:rayos}.\\
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.3]{Capitulo1/2.png}
+\caption{Uso de rayos para representar la progresión de una onda. [3]}
+\label{img:rayos}
+\end{figure}
+
+Un rayo puede experimentar dos fenómenos diferentes, al encontrarse con un plano de separación (\textbf{interfaz}) de dos medios dieléctricos con distinto índice de refracción.\\
+
+\textbf{Reflexión}: se da cuando un rayo de luz incide con un ángulo diferente de 90° con relación a la interfaz, y cambia su trayectoria, regresando al medio de donde viene, como se observa en la Figura \ref{Img:reflex}. Considerando  que el rayo incidente, el rayo reflejado y la normal de la interfaz están en el mismo plano, los ángulos formados por los rayos incidente y reflejado, con respecto a la normal, son iguales, es decir:
+
+\begin{equation}
+\alpha_1=\beta.
+\end{equation}
+
+
+\textbf{Refracción}:  es el cambio de dirección que experimenta el rayo de luz, al atravesar la interfaz, como se muestra en la Figura \ref{Img:reflex}. Se considera que el rayo incidente, la normal y el rayo refractado están en el mismo plano.
+El ángulo de incidencia $\alpha_1$ y el del rayo refractado $\alpha_2$ se relacionan mediante la \textbf{ley de snell}:
+\begin{equation}
+n_1sin(\alpha_1)=n_2sin(\alpha_2).
+\end{equation}
+
+
+Donde \textit{n$_1$} y \textit{n$_2$} son los indices de refracción de cada material.\\
+El \textbf{índice de refracción} de un material se define como la relación entre la velocidad de propagación de la luz en el vacío ($c$) y la velocidad de propagación de la luz a través de dicho material ($v$)
+\begin{equation}
+n=\displaystyle\frac{c}{v}.
+\end{equation}
+
+
+La luz siempre es más lenta en un material que en el vacío, por lo que el índice de refracción siempre es mayor que uno, cuanto más alto es el índice de refracción menor es la velocidad de la luz en dicho medio.\\
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.6]{Capitulo1/3.pdf} 
+\caption{Reflexión y refracción de un rayo incidente en una interfaz.} \label{Img:reflex}
+\end{figure}
+
+Existen dos casos particulares, que dependen de las magnitudes relativas de los índices de refracción:
+\begin{itemize}
+\item[a)] $n_1$ $<$ $n_2$: se tiene que $\alpha_1$ $>$ $\alpha_2$ y el rayo refractado se acercará a la normal de la interfaz.
+\item[b)] $n_1$ $>$ $n_2$: se cumple que $\alpha_1$ $<$ $\alpha_2$ y el rayo refractado se acercará al plano de la interfaz.
+\end{itemize}
+ 
+Para dos medios en los cuales $n_1 >$ $n_2$, cuando el ángulo incidente $\alpha_1$, aumenta de tal manera que el ángulo del rayo refractado $\alpha_2$ sea igual a 90° con relación a la normal, en este caso el ángulo incidente $\alpha_1$ recibe el nombre de \textbf{ángulo crítico}. Si el ángulo del rayo incidente supera el valor del valor del ángulo crítico, el rayo luminoso pasará a ser totalmente reflejado, es decir, regresará al medio de incidencia. Este fenómeno se denomina \textbf{reflexión total}.\\
+
+Con esto se quedan definidos los dos principios por los cuales se da la propagación de la luz en una fibra óptica. El primero, es que $n_1$ $>$ $n_2$, siendo $n_1$ el índice de refracción del núcleo y $n_2$ el del recubrimiento. El segundo factor es que el ángulo de incidencia del rayo, en la interfaz núcleo/revestimiento, debe ser superior al ángulo crítico, definido por los índices de refracción del núcleo y el revestimiento. Si se satisfacen estas condiciones, se da el fenómeno de \textbf{reflexión total interna} [3].
+
+\section{Ángulo de aceptación y apertura numérica}
+Para el análisis completo, se debe incluir un tercer medio, ya que la luz que viaja en el interior de la fibra ha entrado desde el exterior. No todos los rayos emitidos por una fuente luminosa se transmitirán en el interior de la fibra. En la Figura \ref{img:AB} podemos apreciar que dos rayos distintos \textbf{A} y \textbf{B} seguirán distintas trayectorias en el interior de la fibra, el rayo A será transmitido porque una vez en el interior, su ángulo es mayor que el crítico $\theta_c$ y se refleja internamente, mientras que el B tiene un ángulo inferior, así que cada vez que llega a la envoltura, solo se refleja parcialmente y termina abandonando rápidamente la fibra.\\%Todo rayo cuyo ángulo de entrada sea menor o igual que $\theta_a$ será guiado, mientras que si es mayor el rayo será radiado al exterior de la fibra, perdiéndose su energía.\\
+
+Por tanto, el \textbf{ángulo de aceptación $\theta_a$}  será aquel que haga, que cuando el rayo esté en el interior de la fibra, su ángulo de incidencia con la interfaz núcleo/envoltura sea mayor que el ángulo crítico, esto forma un cono cuya generatriz forma un ángulo $\theta_a$ con el eje de la fibra, de
+forma que todos aquellos rayos que incidan con un ángulo inferior a éste cumplirán con el principio de reflexión total y se propagarán por el interior del núcleo, mientras que aquellos que lo superen se irán perdiendo por radiación al exterior en cada incidencia con la interfaz núcleo/recubrimiento. Igualmente, por consideraciones de simetría, a la salida de la fibra los rayos emergentes tendrán el mismo ángulo que a la entrada y por tanto todos los rayos a la salida tendrán un ángulo menor o igual que $\theta_a$.\newpage
+ \begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.5]{Capitulo1/4.pdf} 
+\caption{Dos rayos entrando a una fibra óptica con distinto ángulo de incidencia.}\label{img:AB}
+\end{figure}
+Es posible, a partir de los índices de refracción del núcleo de la fibra, de la envoltura y del exterior, definir el término de \textbf{apertura numérica} (AN), que es el más aceptado para definir la facilidad para acoplar luz en la fibra. 
+La apertura numérica se define como el valor numérico del seno, del máximo ángulo que posibilita el acoplamiento de la onda lumínica, desde el exterior de la fibra óptica hasta su interior, matemáticamente se escribe como:
+\begin{equation}
+AN=n_0 sin(\theta_a).
+\end{equation}
+Usando la ley de snell, esta expresión se transforma en:
+\begin{equation}
+AN=n_1\sqrt{2\delta}.
+\end{equation}
+Donde $\delta$ la diferencia relativa de índices de refracción de los dos medios:
+
+\begin{equation}
+\displaystyle \delta=\frac{n_1-n_2}{n_1}.
+\end{equation}
+
+Se ve, por lo tanto, que la apertura numérica depende exclusivamente de los materiales de que están hechos el núcleo y el revestimiento. Cuanto más parecidos sean sus índices de refracción, menor será la AN y menor el ángulo de aceptación. Mientras más parecidos sean los materiales, se requerirá una fuente de luz más estrecha.\\
+Los valores típicos reales se encuentran entre 0,2 y 0,25. Una elevada AN permite un mejor acoplamiento (mayor introducción de luz en el núcleo), pero incrementa la atenuación, además, si dos fibras ópticas tienen igual AN, se tiene que el ángulo de emisión de luz es igual al de aceptación de la siguiente y por lo tanto se produce un acoplamiento de luz perfecto [6].
+
+
+\section{Modos de propagación}
+Continuando con el análisis usando la óptica geométrica, un \textbf{modo de propagación} se define como un haz o paquete de rayos con características similares, es decir, cada una de las diferentes posibilidades que tiene un conjunto de rayos de luz de propagarse al interior de una fibra óptica.
+Si se incrementa el diámetro del núcleo de la fibra óptica, aumentará el número de modos que pueden viajar por esta, en cambio, si se reduce, los rayos irán concentrados en un solo haz de luz, formando un único modo también llamado modo fundamental.\\
+
+El numero de modos que una fibra puede soportar está dado por una cantidad adimensional llamada frecuencia normalizada o número $V$, definido por:
+
+\begin{equation}
+V=\frac{\pi DAN}{\lambda_0}.
+\end{equation}
+
+Donde $D$ es el diámetro del núcleo, $\lambda_0$ es la longitud de onda de la luz transmitida y $AN$ es la apertura numérica de la fibra óptica.\\
+Para una fibra de salto de índice, el análisis teórico detallado muestra que cuando el número $V$ aumenta por encima del valor de 2.405, el numero de modos ($N_m$), aumenta rápidamente y, una vez que hay varios modos presentes:
+
+\begin{equation}
+N_m\approx \frac{1}{2}(V)^2.
+\end{equation}
+
+Al aumentar el diámetro del núcleo de la fibra, o su índice de refracción, se incrementa el número de modos. En cambio, al incrementar el índice de refracción del recubrimiento o la longitud de onda, el número de modos que admitirá la fibra disminuye [7].
+
+
+\section{Tipos de fibras ópticas}
+Las fibras ópticas se clasifican en dos grupos según los modos de propagación: fibras multimodo y fibras monomodo. Igualmente, de acuerdo al perfil del índice de refracción, este se refiere a la distribución de índices de refracción a través de la sección transversal de la fibra. Como el índice de refracción del revestimiento siempre es constante, se pueden clasificar en función de su perfil de índice de refracción del núcleo, sea perfil gradual o perfil escalonado (también llamado salto de índice).\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.425]{Capitulo1/5.png} 
+\caption{Perfiles de índice de una \textbf{(a)} fibra multimodo de índice escalonado,  \textbf{(b)} fibra multimodo de índice gradual y \textbf{(c)} fibra monomodo de índice escalonado. [8]}\label{img:ToFO}
+\end{figure}
+
+Las fibras multimodo permiten la propagación de una gran cantidad de modos  simultáneamente. El diámetro del núcleo de este tipo de fibras suele ser de 50 $\mu$m ó 62.5 $\mu$m. Se usan en diferentes aplicaciones de corta distancia, menores a 2 km [6].
+
+\subsection{Fibras multimodo de índice escalonado}
+En este tipo de fibra, el índice de refracción del núcleo permanece constante, y en la frontera núcleo/revestimiento, el valor del índice de refracción decrece abruptamente, su perfil de índice se representa con una sección en escalón con dos secciones rectas, como se muestra en la Figura \ref{img:ToFO}(a) \\
+Los modos emitidos en uno de sus extremos en un mismo instante, siguen distintos caminos dentro del núcleo, llegando cada uno de ellos en instantes diferentes al otro extremo de la fibra. Al ser la señal resultante la suma de los diversos modos de propagación que llegan el extremo receptor, este desfasamiento en el tiempo provoca un ensanchamiento del pulso original, esto se le conoce como dispersión intermodal y disminuye el ancho de banda del sistema.\\
+
+\subsection{Fibras multimodo de índice gradual}
+El índice de refracción del núcleo es variable, siendo máximo en el eje y disminuyendo hacia la periferia. En la frontera del núcleo y revestimiento se igualan los valores de ambos índices, así el perfil de índice de la fibra se representa con una forma cóncava acampanada y las trayectorias de lo modos son curvas, Figura \ref{img:ToFO} (b).\\
+
+Debido a esto se presentan características de transmisión interesantes. Como el índice de refracción en el núcleo es mayor, la velocidad de los modos que se transmiten en este, es menor que la de los que viajan por la periferia, así, la menor distancia que recorren los modos que viajan por el núcleo se compensa con su menor velocidad, permitiendo así, que los modos emitidos en una cara lleguen casi al mismo tiempo al extremo receptor. Con esto, el retardo entre modos es menor y conlleva a un aumento en el ancho de banda.
+
+\subsection{Fibras monomodo de índice escalonado}
+La única forma de conseguir la transmisión de un único modo es reducir su diámetro. Llevándolo a valores inferiores de 6 o 10 $\mu$m se consigue la condición $V<$2.405, esto es, una fibra monomodo [7].
+En este tipo de fibras se tiene una única posibilidad de propagación, esta se denomina, modo fundamental.  El perfil de índice se representa mediante una sección en escalón con dos secciones rectas, como se muestra en la Figura \ref{img:ToFO} (c).\\
+
+En este tipo de fibras no se da el fenómeno de ensanchamiento de pulso, por dispersión intermodal, teniendo así un ancho de banda notablemente superior a las fibras multimodo, es por ello que son ampliamente usadas en telecomunicaciones; son aplicables para enlaces de largas distancias y gran flujo de datos, y también para enlaces submarinos.
+
+
+\section{Atenuación y dispersión}
+Existen dos fenómenos que contribuyen a degradar la información en un enlace de fibra óptica, de modo que, en la recepción de la señal, esta no sea idéntica a la transmitida desde el origen. Se trata de las perdidas por atenuación en el interior de la fibra óptica y la dispersión en el material.
+\subsection{Atenuación}
+Se define la pérdida o atenuación en una fibra óptica como la relación entre las potencias de la señal de salida y entrada, expresada en decibles (dB) y calculada en una determinada longitud de onda.
+\begin{equation}
+P(\lambda)_{[dB]}=10log\left(\frac{P_T}{P_R}\right).
+\end{equation}
+Donde $P_T$ y $P_R$ son la potencia transmitida y la potencia recibida respectivamente. El coeficiente de atenuación $\alpha (\lambda)$ se define como la atenuación por unidad de longitud ($L$) generalmente dada en km.
+\begin{equation}
+\alpha(\lambda)=\frac{1}{L}10log \left(\frac{P_T}{P_R}\right).
+\end{equation}
+
+Los fenómenos que provocan la atenuación de la señal pueden ser: \textbf{intrínsecos}, los cuales dependen del material de fabricación de la fibra óptica; y \textbf{extrínsecos}, no dependen del material del que está hecho la fibra óptica y ambos son inevitables.\\
+Las principales causas intrínsecas de atenuación son:
+\begin{itemize}
+\item \textbf{Absorción debida a rayos UV e IR}: Esto se debe a la interacción de los fotones que viajan por la fibra y las moléculas del núcleo. Parte de la energía de los fotones se cede a las moléculas de $Si$ que se van encontrando en su recorrido.
+La absorción debida a la componente de radiación UV de la luz transmitida decrece exponencialmente conforme aumenta la longitud de onda, y es casi despreciable a los 1000 nm. La debida a la luz IR se origina por las vibraciones de átomos de $Si$ y $O$, creciendo exponencialmente conforme aumenta la longitud de onda, pero es apreciable hasta los 1400 nm.
+
+\item \textbf{Dispersión de Rayleigh}: Se debe a fluctuaciones de concentración y densidad, burbujas en el material, fisuras o imperfecciones de la guía de onda por irregularidades en la interfaz núcleo/revestimiento. 
+Debido a esto, se produce una dispersión de la señal que se traduce en una atenuación o pérdida de potencia, que decrece exponencialmente con la cuarta potencia de la longitud de onda.
+\begin{equation}
+P=\frac{K}{\lambda^4}.
+\end{equation}
+$K$ depende de la diferencia relativa de los índices de refracción.
+\end{itemize}
+
+En cuanto a las principales causas extrínsecas de atenuación tenemos:
+\begin{itemize}
+\item \textbf{Absorción debida a impurezas}: se dan principalmente por absorciones de los radicales oxidrilos $OH$ (producto del proceso de fabricación), este fenómeno produce tres picos adicionales de pérdidas, correspondientes a los tres primeros armónicos de esta frecuencia, en longitudes de onda definidas.
+\end{itemize}
+Los factores antes mencionados y razones históricas, determinan las denominadas ventanas de baja atenuación en fibras ópticas. En la Figura \ref{img:FOW}, podemos ver la curva de atenuación resultante al considerar todos los fenómenos listados anteriormente. Las ventanas de operación están centradas en 850 nm, 1310 nm y 1550 nm, siendo esta última, la que presenta menor atenuación y la utilizada en las comunicaciones por fibra óptica.
+
+\begin{figure}[hbtp] 
+\centering
+\includegraphics[scale=0.35]{Capitulo1/6.pdf} 
+\caption{Ventanas de operación en fibras ópticas} \label{img:FOW}
+\end{figure}
+
+Existen otros factores externos de atenuación que surgen al trabajar con fibras ópticas. \\
+Las \textbf{curvaturas} se originan por una mala instalación o manipulación de la fibra. Esto provoca que se originen irregularidades geométricas en la interfaz núcleo/revestimiento, lo que provoca que algunos rayos comiencen a incidir con ángulos diferentes a los esperados, y la luz deje de reflejarse totalmente en el interior de la fibra, produciendo la fuga de algunos modos por el revestimiento. \\
+Las \textbf{microcurvaturas} son defectos de fabricación de la fibra óptica, pueden ser irregularidades en la interfaz núcleo/revestimiento, fluctuaciones de diámetro y errores de concentricidad.\\
+Las \textbf{perdidas por empalme}, se dan en las uniones de dos extremos de fibra óptica, el valor depende de la técnica utilizada, y de la destreza de quien haga el empalme. También se dan perdidas en los \textbf{conectores} que se usan para unir la fibra con los dispositivos ópticos.
+\subsection{Dispersión}
+Un pulso emitido en un extremo de la fibra, perfectamente definido, alcanza el otro extremo con un ensanchamiento, puesto que durante el tránsito por el núcleo, cada modo constituyente del pulso posee una disposición propia y sigue un camino diferente dentro de la guía.
+El efecto resultante recibe el nombre de dispersión temporal, esto es una limitación para la banda pasante del sistema y es acumulativo con la distancia. Las principales causas de este ensanchamiento del pulso en el extremo de salida son tres:\\
+\begin{itemize}
+\item[\textbf{a)}] Dispersión debida a la diferencia de tiempos de llegada de los distintos modos al extremo receptor de la fibra y al número de modos que circulan por el interior. Esto se le conoce como dispersión modal o dispersión intermodal, solo afecta a las fibras multimodo.
+\item[\textbf{b)}] Dispersión debida a la no cromaticidad del espectro de cada modo. Es decir, las variaciones que sufren los modos debido a las diferentes velocidades de propagación para cada longitud de onda, denominada dispersión cromática o intramodal, dentro de esta causa se le pueden evidenciar dos agentes diferentes:
+\begin{itemize}
+\item El ancho espectral de la fuente óptica no es totalmente monocromático, entonces cada modo propaga todas las líneas espectrales correspondientes a las longitudes de onda del emisor. Como a cada longitud de onda le corresponde una velocidad de propagación diferente, tendremos dentro de cada modo una velocidad distinta para cada longitud de onda, lo que origina otro tipo de dispersión, llamado dispersión espectral o del material. Este efecto se presenta en fibras monomodo y multimodo.
+\item Otro tipo de dispersión se da por los parámetros ópticos y geométricos de la fibra óptica, tiene mayor relevancia en las fibras monomodo, para fibras multimodo la dispersión es pequeña y se puede despreciar. Debido al pequeño diámetro del núcleo de una fibra monomodo, la energía del pulso no solo se transmite por el núcleo como es de esperarse, sino que una parte también se transmite por el revestimiento. Esto se le conoce como dispersión de guía de onda.
+\end{itemize}
+\end{itemize}
+
+\section{Fibras ópticas dopadas con tierras raras}
+Las fibras ópticas dopadas con tierras raras son un medio excelente para desarrollar dispositivos ópticos que están basados en el fenómeno de amplificación, ya que combinan la ganancia óptica de los iones de tierras raras y las bajas pérdidas de propagación de las fibras ópticas.\\
+
+Las tierras raras tienen características que las distinguen de otros iones: absorben y emiten sobre estrechas longitudes de onda, y estas, son relativamente insensibles al material huésped, las intensidades de estas transiciones son débiles, la vida útil de los estados metaestables es larga y las eficiencias cuánticas tienden a ser altas [10]. Las tierras raras se dividen en dos grupos de 14 elementos, los lantánidos y los actínidos, a pesar de que ambos grupos comparten varias propiedades electrónicas, solo nos interesan los lantánidos, ya que los actínidos casi no tienen isótopos estables, para ser usados en láseres o amplificadores [9]. El grupo de lantánidos comienza por el cerio (Ce, Z=58) y termina con el lutecio (Lu, Z=71), Z es el número atómico. De éstos, los mas usados en el desarrollo de sistemas láser de fibra óptica, son el iterbio (Yb$^{3+}$), erbio (Er$^{3+}$), tulio (Tm$^{3+}$) , neodimio (Nd$^{3+}$), samario (Sm$^{3+}$),  holmio (Ho$^{3+}$) y praseodimio (Pr$^{3+}$). El nivel trivalente de ionización ($3+$) es el mas estable para los iones de lantánidos [10].\\
+
+Uno de los iones más usados en la actualidad para dopar fibras ópticas es el erbio, ya que su banda de emisión se encuentra tipícamente en torno al intervalo que va desde 1.53 a 1.55 $\mu$m, esto es, la tercera ventana de operación en fibras ópticas, la cual presenta menor atenuación y es la utilizada en telecomunicaciones ópticas.\\
+En la práctica una fibra óptica dopada con erbio, es una fibra estándar de sílice en la cual, se le introdujo una pequeña fracción de iones de erbio (típicamente entre 100 y 1000 ppm) durante el procedimiento de fabricación. En una red de silice, el erbio se ioniza tres veces (Er$^{3+}$), perdiendo tres de sus electrones periféricos [9]. 
+
+ Su principal aplicación es en amplificadores de fibra óptica dopada con erbio (EDFAs) y láseres de fibra óptica dopada con erbio.\\
+ 

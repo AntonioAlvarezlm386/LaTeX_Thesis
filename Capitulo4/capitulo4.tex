@@ -1,0 +1,380 @@
+%Capitulo 4
+
+\chapter{Desarrollo experimental}
+
+El arreglo experimental del presente trabajo, consiste en un láser de fibra óptica, usando una fibra dopada con erbio como medio activo, en una cavidad de anillo. En la primera etapa se hizo el arreglo principal, el cual emite en modo continuo, al que se le hicieron algunas modificaciones para afinar el haz de salida, después de cada modificación se caracterizó, para identificar los cambios en las propiedades del haz.
+En la segunda etapa implemento un modulador electro óptico en la cavidad, con el fin de obtener un láser pulsado, mediante la técnica de amarre de modos activo, usando modulación de amplitud (AM). \\[0.5cm]
+
+
+Para el bombeo se usó un diodo láser modelo PL980P330J (Apéndice \ref{Ap:A}), con longitud de onda centrada en $\lambda=980$ nm (Figura \ref{fig:espectrobombeo}). Se caracterizó usando un medidor de potencia, suministrando al diodo láser una corriente de 0 mA hasta 500 mA, haciendo incrementos de 10 mA por muestra, respetando los parámetros establecidos por la hoja de datos correspondiente. La máxima potencia óptica proporcionada por el diodo es de 256 mW.\\[0.5cm]
+
+El espectro del diodo láser se obtuvo mediante el analizador de espectros ópticos (OSA, Apéndice \ref{Ap:F}), la potencia se concentra entre longitudes de onda de  970 y 990 nm, esto es, un ancho de banda de ganancia de aproximadamente 20 nanometros, con el máximo cercano a 980 nm. La gráfica muestra el espectro normalizado, el propósito es solo mostrar longitud de onda central (Figura \ref{img:pumpespectro}).
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.4]{Capitulo4/4_0_1.pdf} 
+\caption{Caracterización del láser de bombeo, el cual suministra una potencia máxima de 256 mW.}\label{fig:espectrobombeo}
+\end{figure}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.4]{Capitulo4/4_0_2.pdf}
+\caption{Espectro de emisión del láser de bombeo.} \label{img:pumpespectro}
+\end{figure}
+\newpage
+
+
+\section{Primer arreglo experimental: láser de fibra óptica operando en régimen continuo}
+
+El arreglo principal consiste en un láser de fibra óptica con una cavidad de 12.45 m de longitud, usando una fibra monomodo ER30 de 5 m de longitud como medio activo. El bombeo se realizó con el diodo láser descrito anteriormente.\\ 
+
+El bombeo se introduce a la fibra dopada mediante un acoplador WDM, posteriormente un acoplador 90/10 divide la potencia óptica, el 10\% va  a la salida del láser y el 90\% se usa como retroalimentación.\\ Se ha usado un controlador de polarización manual, el cual consta de tres placas retardadoras de onda de 56 mm de diámetro, dos de $\lambda/4$ y una de $\lambda/2$, con 3 y 6 vueltas de fibra óptica respectivamente. Esto con el fin de controlar manualmente la polarización de la luz viajando por la cavidad, esperando encontrar cambios en las propiedades del haz de salida. \\
+Se ha usado un aislador, para asegurar una propagación unidireccional dentro de la cavidad, por ultimo se cierra la cavidad con un acoplador WDM, este acopla el haz de bombeo y el de retroalimentación a la cavidad, para así completar un nuevo ciclo, (Figura \ref{img:esquema1}). \\
+Los resultados que se presentan en las siguientes subsecciones se obtuvieron mediante modificaciones hechas en la longitud de la cavidad.
+
+	\subsection{Cavidad de 12.45m}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.7]{Capitulo4/Esq1.pdf} 
+\caption{Esquema del arreglo experimental, con cavidad de 12.45m.}\label{img:esquema1}
+\end{figure}
+
+Con la configuración de la Figura \ref{img:esquema1}, se obtuvo una potencia máxima salida de 12.13 mW, esto corresponde a 256 mW de bombeo. El umbral del láser se registró para una potencia de bombeo de $13.76$ mW, a partir de esto, la salida tiene un comportamiento lineal, con una pendiente de eficiencia del 50\%, (Figura \ref{imag:caract1245}).
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.35]{Capitulo4/4_1_1.pdf}
+\caption{Caracterización del láser de fibra óptica con cavidad de 12.45 m. }
+\label{imag:caract1245}
+\end{figure}\\
+
+En cuanto el espectro de emisión, para potencias de bombeo debajo del umbral, esto es $5.4\; \mu W$ a la salida del láser, se obtuvo un ancho de al menos 85 nm, este va desde $\lambda=1525$ nm hasta $\lambda=1610$ nm, (Figura \ref{img:fig:espectro1}), esto es aun señal de ASE (ver Sección \ref{sec:ASE}), es decir, la oscilación láser aun no ha iniciado. Mientras se mantiene este estado, no se observaron cambios significativos al modificar la polarización manualmente.\\
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.575]{Capitulo4/4_1_2.pdf} 
+\caption{Espectros para potencias de bombeo inferiores a 13.76 mW. \textbf{(a)} Espectro en escala lineal y \textbf{(b)} en escala logaritmica.}\label{img:fig:espectro1}
+\end{figure}\newpage
+
+Cuando la oscilación óptica comienza, para potencias de bombeo superiores a 13.76 mW, el espectro se reduce drásticamente, quedando entre 1594.25 nm a 1598.25 nm. Haciendo ajustes manuales en la polarización, se logró reducir este rango espectral a unos 0.25 nm, alrededor de $\lambda=$1598 nm (Figura \ref{fig:espectro1.2}). 
+Para calcular el ancho de banda de ganancia en frecuencias, se usó la formula de frecuencia dada por:
+\begin{equation}
+v=c/\lambda.
+\end{equation} 
+Donde $c$ es la velocidad de la luz, y $\lambda$ la longitud de onda. El ancho de banda se obtiene mediante $\Delta v_L=v_2-v_1$, donde $v_1$ y $v_2$ son las frecuencias correspondientes a las longitudes de onda en los limites del espectro. En este caso, el ancho de banda de ganancia es entonces de unos 29.36 GHz, esto corresponde a aproximadamente 1245 modos oscilando en la cavidad igualmente espaciados por la frecuencia $\Delta v= 24.09$ MHz, esto de acuerdo a la ecuación \ref{eq:modos}.\vspace{0.5cm}
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.35]{Capitulo4/4_1_3.pdf}  
+\caption{Espectro de emisión, para una potencia de bombeo de 15.66 mW.} \label{fig:espectro1.2}
+\end{figure} \newpage
+
+
+
+\vspace{1cm}
+	\subsection{Cavidad de 142.45m}
+\vspace{0.5cm}
+Se agregó un carrete de fibra estándar SMF 28, con 130 m de fibra, así, la longitud total de la cavidad quedó de 142.45 m. Este valor es aproximado, ya que durante la manipulación y los empalmes se tuvo que cortar pequeños tramos de fibra óptica. El objetivo de esta modificación, es poder observar el comportamiento de la intensidad del haz de salida en el dominio del tiempo. Como se vio en la sección  \ref{sec:CW}, se espera un conjunto de pulsos de amplitudes aleatorias, pero que a la vez presentan cierta periodicidad en el tiempo, ya que es la combinación de un gran número de modos igualmente espaciados en frecuencia oscilando en la cavidad, los cuales, dependen de la longitud de la cavidad.\\[1.5cm]
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.75]{Capitulo4/Esq2.pdf}
+\caption{Esquema del láser de fibra óptica, con carrete de 130 m de fibra estándar SMF28.}
+\label{img:esq142}
+\end{figure}\\[1.5cm]
+
+Se obtuvo una potencia máxima de 11.03 mW, es decir, la potencia disminuyó algunas unidades, esto se debe principalmente por los empalmes necesarios para acoplar el tramo de 130 m de fibra. El umbral se encontró alrededor de 13.76 mW de potencia de bombeo, el mismo valor que el arreglo anterior. En cuanto al valor de la pendiente de eficiencia, es de 45\%. \\[2cm]
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.4]{Capitulo4/4_2_1.pdf}
+\caption{Caracterización del láser con cavidad de 142.45 m.} 
+\end{figure}%\\[1.5cm]
+
+Para obtener la imagen en el tiempo del pulso se ha usado un fotodetector ultrarapido de Thorlabs, modelo DET08CFC/M (Apéndice \ref{Ap:C}), y un osciloscopio modelo MSOX4154A de 1.5 GHz (Apéndice \ref{Ap:E}). La Figura \ref{fig:p1}, muestra el pulso registrado a la salida del láser, note que esto es debido a la suma o interferencia constructiva de los modos en la cavidad, el láser aun está operando en modo continuo. En este caso, el ancho a amedia altura  (FWHM, \textit{Full Width at Half Maximum}) del pulso es menor a 0.5 ns, o en el orden de picosegundos, esto corresponde a un ancho menor a  a 500 ps.\\[1cm]
+
+Haciendo un barrido de un intervalo mas grande, se ha obtenido una imagen mas amplia del comportamiento del haz en el dominio del tiempo, registrando un patrón donde las intensidades parecen variar aleatoriamente, pero en cierto punto, se aprecia un comportamiento periódico. La separación en el tiempo de los pulsos, es de aproximadamente $0.75\; \mu$s. Esto corresponde a una frecuencia de repetición de 1.33 MHz (Figura \ref{fig:p1.2}). Este valor se ha estimado usando la expresión para la frecuencia dada por:
+\begin{equation}
+v=\frac{1}{\tau}.
+\end{equation}
+Donde $\tau$ es el periodo.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.375]{Capitulo4/4_2_2.pdf} 
+\caption{Pulso formado en el haz de salida debido a la suma de los modos de la cavidad.}\label{fig:p1}
+\end{figure}
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.55]{Capitulo4/4_2_4.pdf}
+\caption{Imagen el tiempo de la intensidad del haz de salida, se observa un periodo aproximado de 0.75 $\mu$s.}
+\label{fig:p1.2}
+\end{figure}\newpage
+
+
+\subsection{Cavidad de 242.45m}
+ 
+En el carrete de fibra óptica del arreglo anterior (Figura \ref{img:esq142}) , se agregó un tramo de fibra óptica de 100 m, obteniendo así una longitud final de 242.45 m, recalcando que este es un dato aproximado. Esto con el objetivo de obtener un cambio en la imagen en el dominio del tiempo del haz de salida, específicamente se espera obtener un cambio en la periodicidad de la intensidad de los pulsos.\\
+
+ De la caracterización del láser se obtuvo una potencia máxima de salida de 10.24 mW, el umbral se tiene para una potencia de bombeo de 20.12 mW. Un valor menor para la potencia máxima y un valor más alto para el umbral se deben principalmente a los empalmes hechos para integrar el nuevo tramo de fibra óptica, lo que induce mas pérdidas en la cavidad. 
+La pendiente de eficiencia disminuyó, quedando entonces con un valor de 42\%.
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.4]{Capitulo4/4_3_1.pdf}
+\caption{Caracterización del láser con cavidad de 242.45m.}
+\end{figure}
+
+
+Con el osciloscopio y el fotodetector se caracterizó el haz de salida en el dominio del tiempo, la forma y ancho del pulso cambia en comparación al obtenido anteriormente, esta vez se obtuvó un ancho a media altura de aproximadamente 20 ns (Figura \ref{fig:p242}), de igual forma se registró un cambio en la periodicidad de los pulsos, obteniendo un periodo de  0.62 $\mu s$ (ver Figura \ref{fig:pt242}), esto corresponde una frecuencia de repetición de 1.6 MHz. Esto se debe a que las frecuencias de los modos que oscilan en la cavidad dependen de la longitud, como se detalló en la sección 3.2.1, esto provoca que un cambio en la longitud de la cavidad afecte directamente la forma de onda de la intensidad.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.35]{Capitulo4/4_3_7.pdf}
+\caption{Pulso obtenido a la salida del láser, resultado de la interferencia de los modos oscilando en la cavidad.} \label{fig:p242}
+\end{figure}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.55]{Capitulo4/4_3_5.pdf}
+\caption{Imagen en el tiempo de la intensidad del haz a la salida del láser, con periodo de aproximadamente 0.62 $\mu$s.} \label{fig:pt242}
+\end{figure}
+
+
+
+
+\newpage
+\vspace{2cm}
+Se caracterizó de nuevo el espectro, para evaluar si habían cambios debido al incremento en la longitud de la cavidad. Se obtuvo un comportamiento similar al del láser original, una señal de ASE antes de iniciar la oscilación, con espectro de ganancia muy ancho para potencias de bombeo inferiores al valor umbral, 20.12 mW (Figura \ref{img:esp1421}), donde los cambios en la polarización no inducen cambios en la distribución de potencias.\\[1cm]
+Si la potencia de bombeo sigue aumentando, la oscilación láser comienza y el ancho del espectro disminuye, siendo de aproximadamente unos 0.75 nm, con dos picos en los extremos (linea azul, Figura \ref{fig:Espectro242}). Mediante cambios en la polarización se obtuvo emisión alrededor de 1594.5 nm, y un ancho de 0.25 nm aproximadamente (linea naranja, Figura \ref{fig:Espectro242}). Esto corresponde a un ancho de banda de ganancia en frecuencias de 41.29 MHz, esto son unos $33.57\times 10^3$ modos oscilando en la cavidad, igualmente espaciados por la frecuencia fundamental, con valor de $\Delta v=1.23$ MHz.\\[1cm]
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.6]{Capitulo4/4_3_9.pdf} 
+\caption{Espectro de ASE, para potencias de bombeo inferiores a 20.12 mW. \textbf{(a)} Espectro en escala lineal y \textbf{(b)} en escala logarítmica.}
+\label{img:esp1421}
+\end{figure}
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.45]{Capitulo4/4_3_8.pdf} 
+\caption{Cambios en el espectro para dos posiciones diferentes de los controladores de polarización, y potencias de bombeo superiores a 20.12 mW.} \label{fig:Espectro242}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\section{Segundo arreglo experimental: láser de fibra óptica operando en régimen pulsado}
+\vspace{1cm}
+
+\subsection{Cavidad de 16.1 m}
+\vspace{0.5cm}
+El objetivo es obtener emisión de radiación en régimen pulsado a la salida del láser. Para lograr esto, se decidió usar la técnica de mode-locked activo, específicamente mediante modulación de amplitud (AM), esto es, metiendo pérdidas periódicas en la cavidad mediante el uso de un modulador controlado por una fuente externa.\\[0.5cm]
+
+Se usó un modulador electro-óptico de Thorlabs modelo LN53S-FC (Apéndice \ref{Ap:B}), el cual consta de un modulador de fase montado en una de las ramas de un interferómetro tipo Mach Zehnder (el funcionamiento de este se aborda en la sección \ref{sec:3.3.7}). La Figura \ref{fig:esp3} muestra como se ha integrado este elemento a la cavidad. Para acoplar el modulador a la cavidad de fibra, se han usado conectores de fibra, como consecuencia inmediata, la longitud aumentó unos metros, teniendo al final 16.1 m.\\[1cm]
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.6]{Capitulo4/Esq3.pdf} 
+\caption{Esquema del láser de fibra con un modulador electro-óptico.}\label{fig:esp3}
+\end{figure}\newpage
+Debido a las pérdidas inducidas por el modulador, y las pérdidas por el uso de conectores, la potencia óptica disminuyó drásticamente, dando como máximo 18.7 $\mu$W, de igual forma el umbral aumentó algunas unidades, es decir, se alcanzó para alrededor de 26.4 mW de potencia de  bombeo. Para esta configuración, el comportamiento de la potencia de salida, no presenta un comportamiento totalmente lineal. Esto se debe a la saturación de la ganancia en la cavidad. Inmediatamente después del umbral se tiene una pendiente de eficiencia de 1.7\%, la cual disminuye aumentando el bombeo por encima de 94.8 mW (Figura \ref{fig:c16.1}). \\[1cm]
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.4]{Capitulo4/4_4_1.pdf}
+\caption{Caracterización del láser después de implementar el modulador electro óptico} \label{fig:c16.1}
+\end{figure}%\\[1cm]
+
+Otro aspecto que aportó pérdidas en la potencia óptica a la salida del láser, son las curvaturas en la fibra de la cavidad, principalmente en los tramos en donde se acopló el modulador, esto debido a que el modulador se instaló sobre una base no estable, lo que provocó curvaturas en la fibra.\newpage
+
+\vspace{1cm}
+Para controlar el modulador, se usó un generador de funciones modelo DG645 (Apéndice \ref{Ap:D}), usando una forma de onda cuadrada, permite afinar la duración de los pulsos a la salida del láser. Para evaluar esto se tomaron algunas muestras para anchos de pulso del orden de nanosegundos mientras se suministraba una potencia de bombeo de 62.66 mW, estas se presentan en la Figura \ref{fig:pw}.\\
+
+ Los valores presentados se eligieron de acuerdo a la capacidad de respuesta del fotodetector, esto es por que para duraciones mas cortas, ya no se pueden obtener muestras con buena resolución.\\[1cm]
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.45]{Capitulo4/4_4_4.pdf}
+\caption{Control de la duración del pulso mediante el generador de funciones.} \label{fig:pw}
+\end{figure}\newpage
+
+Se evaluó el comportamiento del haz de salida en el dominio del tiempo, esperando obtener un tren de pulsos. En la gráfica de la Figura \ref{img:419} se presentan muestras tomadas para potencias de bombeo cercanas al valor umbral, se puede ver la formación del pulso conforme se aumenta la potencia de bombeo, la gráfica incrustada es para una potencia muy baja respecto a la otras, debido a esto, difícilmente se puede apreciar en la misma escala que el resto de muestras.\\[0.5cm]
+
+Así también, se aprecia una serie de pulsos, pero que no presentan una intensidad estable, sino que disminuyen en cada periodo. Esto se debe a que no se sincronizó la frecuencia de modulación $v_m=20$ MHz con la frecuencia fundamental  $\Delta v\approx 18.63$ MHz, debido a que se desconocía la existencia de esta condición. Como consecuencia no se obtuvó un régimen pulsado estable.\\[1.5cm]
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.6]{Capitulo4/4_4_2.pdf}
+\caption{Formación de pulsos en la salida del láser para valores de bombeo cercanos al umbral.}
+\label{img:419}
+\end{figure}
+
+
+
+
+
+
+\newpage
+\subsection{Cavidad de 146.1 m}
+\vspace{0.5cm}
+A la cavidad se le agregó un carrete con 130 m de fibra estándar SMF 28, quedando una cavidad con longitud de 146.1 m. El objetivo es evaluar si con esta modificación se induce algún cambio en las propiedades del haz de salida, el esquema correspondiente se muestra en la Figura \ref{fig:Esq4}. \\[1cm] 
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.6]{Capitulo4/Esq4.pdf} 
+\caption{Esquema de la cavidad, con carrete de fibra SMF 28.}\label{fig:Esq4}
+\end{figure}\\[1cm]
+
+
+Se obtuvo una potencia máxima de emisión de 5.39 mW, mejorando un poco el resultado anterior. El el valor umbral se encontró para 26.4 mW de bombeo, conforme se aumenta la potencia de bombeo se obtiene un comportamiento lineal, con  una pendiente de eficiencia de 6.7\% (ver Figura \ref{fig:4.21}). Ya que no se hizo otra modificación la cavidad, se puede deducir que gran parte de las pérdidas en el arreglo anterior fuerón inducidas principalmente por curvaturas.\\
+
+Se tomaron algunas muestras de la formación del pulso para valores de bombeo  cercanos al umbral, específicamente, para potencias de bombeo a partir de 63.9 mW, esto debido a que la resolución del fotodetector no permitía mediciones a potencias más bajas, estas se presentan en la Figura \ref{Fig:452}.\vspace{3cm}
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.4]{Capitulo4/4_5_(2).pdf}
+\caption{Caracterizaión del láser con el carrete de fibra de 130 m.} \label{fig:4.21}
+\end{figure}
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.4]{Capitulo4/4_5_2.pdf}
+\caption{Formación el pulso para potencias de bombeo cercanas al valor umbral.}
+\label{Fig:452}
+\end{figure}
+
+
+
+En cuanto al espectro, se obtuvo un ancho de banda de ganancia que va de 1520 nm hasta 1570 nm, es decir, de unos 50 nm de ancho, con un máximos alrededor de 1530 nm y 1556 nm, los cuales cambian dependiendo de la polarización inducida en la cavidad (Figura \ref{fig:453}); esto se debe a que la interferencia de la señal óptica en la cavidad, se ve afectada ante los cambios de polarización. Este intervalo corresponde a un ancho de banda de ganancia en frecuencia de aproximadamente 6.2 THz. Esto es alrededor de  $3.06\times 10^6$ modos oscilando en la cavidad, separados por un valor de la frecuencia fundamental de $\Delta v\approx 1.6$ MHz. Cambiando la posición de los controladores manuales de polarización se puede cambiar ligeramente esta distribución. En la Figura \ref{fig:453}, se muestran estos cambios para dos posiciones diferentes del controlador de polarización. 
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.47]{Capitulo4/4_5_3.pdf}
+\caption{Espectro del láser para dos posiciones de los controladores de polarización.} \label{fig:453}
+\end{figure}
+
+
+De nuevo, se evaluó el control de la duración de los pulsos mediante el generador de funciones, algunas muestras tomadas se presentan en la gráfica de la Figura \ref{fig:454}.\\
+ 
+La frecuencia fundamental de la cavidad, de acuerdo a la ecuación \ref{vfund}, es aproximadamente $\Delta v=$ 1.6 MHz. Para tener una salida de pulsos estable, la frecuencia de modulación se ajustó a este valor, es decir $v_m=$ 1.6 MHz, de esta forma se obtuvo un régimen de operación pulsado estable. A la salida se pudo obtener un tren de pulsos con frecuencia $\Delta v$, esto corresponde a un periodo de repetición de 0.625 $\mu$s, como se puede observar en la Figura \ref{fig:455}. 
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.45]{Capitulo4/4_5_4.pdf}
+\caption{Afinación de la duración del pulso, mediante el generador de funciones.} \label{fig:454}
+\end{figure}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.57]{Capitulo4/4_5_5.pdf}
+\caption{Imagen en el tiempo de la intensidad del haz de salida.} \label{fig:455}
+\end{figure}
+
+
+
+
+\chapter*{Conclusiones} 
+Se desarrolló una fuente de radiación óptica coherente, en la región espectral del infrarrojo, usando una cavidad de fibra óptica en anillo, una fibra óptica Er30 de 5 m de longitud como medio activo y un diodo láser como fuente de bombeo.\\
+
+En la primera etapa se construyó el modelo base del trabajo, siendo una cavidad de 12.45 m de longitud. De la caracterización se encontró el valor umbral para 13.76 mW de bombeo, y la potencia máxima obtenida fue de 12.13 mW, con una pendiente de eficiencia de 50\%.\\
+El espectro de emisión se encontró entre 1594 y 1598 nm. Mediante ajustes de la polarización se pudo reducir este rango espectral, hasta obtener un ancho de 0.25 nm, en torno a la longitud de $\lambda=$1598 nm. La intensidad a la salida del láser se observo como un conjunto de pulsos con amplitud aleatoria y cierta periodicidad. Aumentando la longitud de la cavidad, agregando fibra estándar, se registraron cambios en el periodo, y en el espectro, obteniendo emisión a 1594 nm, para una cavidad de 245 m. \\
+
+En la segunda etapa, se implementó un modulador electro-óptico en la cavidad, controlado por un generador de funciones. El objetivo fue obtener radiación óptica en régimen pulsado, la técnica implementada ha sido mode-locked activo mediante modulación de amplitud. Esto es, generar pulsos introduciendo pérdidas periódicas en la cavidad. Se redujo en gran medida la potencia de emisión, obteniendo como máximo, 5.39 mW y una pendiente de eficiencia de 6.7\%. Ademas se tuvieron pérdidas considerables por conectores y por curvaturas. Se registró un ensanchamiento del espectro, teniendo un ancho de unos 50 nm, en el intervalo de 1520 a 1570 nm, con cambios considerables en la distribución de potencias al aplicar cambios en polarización.\\
+En cuanto a la intensidad del haz, se obtuvieron pulsos con una duración ajustable en el rango de nanósegundos, y una frecuencia de repetición $v=1.6$ MHz, para una cavidad de 146 m de longitud.\\
+\newpage
+Ante los resultados obtenidos, se pueden considerar algunas propuestas para un mejor rendimiento: principalmente usar una estructura sólida para evitar curvaturas, ya que estas inducen pérdidas. Cambiar los conectores por empalmes para reducir las pérdidas que se generan en la interfaz entre conectores. Por último, para obtener un régimen pulsado estable, se debe tener un estricto control de la longitud de la cavidad ($l$), para poder sincronizar la frecuencia de modulación $v_m$, con la frecuencia fundamental $\Delta v=c/nl$. Si se requiere una frecuencia de emisión específica, se puede obtener ajustando la longitud de la cavidad, la cual se calcula despejándola de la expresión anterior.\\
+
+
+En la práctica, este dispositivo podría utilizarse para aplicaciones de sensado de temperatura [31] o bien para caracterización de dispositivos ópticos en la 3ra banda de operación de fibras ópticas, por ejemplo en la caracterización de amplificadores de fibra óptica dopada con erbio [32].
+
+
+
+\newpage
+\section*{Referencias}
+
+\begin{itemize}
+\item[[1]] Hadjifotiou, T. (2008). ''\textit{The cable and telecomunications professionals' reference}''. (3a ed.). Oxford: Focal press.
+
+\item[[2]] J. X. Cai. et al. ''\textit{Long-Haul 40 Gb/s DWDM transmission with aggregate capacities exeeding 1 Tb/s}''. Journal of Lightwave Technology. Vol. 20, 2247-2258, 2002.
+
+\item[[3]] Azadeh, M. (2009). ''\textit{Fiber optics engineering}''. New York: Springer.
+
+\item[[4]] Geronimo M, C. ''\textit{Manual de comunicaciones por fibras ópticas}''
+
+\item[[5]] R. Dutton, H. (1998). ''\textit{Understanding optical cummunications}''. IBM Corporation.
+
+\item[[6]] Santa Cruz, O. M. ''\textit{Modulo introductorio: principios generales del sistema de fibra óptica}''
+
+\item[[7]] Kumar, S. \& Deen, M. J. (2014). ''\textit{Fiber optic communication systems}''. Reino Unido: John Wiley and Sons, Ltd.
+ 
+\item[[8]] Ajoy, G. \& K., Thyagarajan. ''\textit{Introduction to fiber optics}''. Cambridge: University Press.
+
+\item[[9]] P. C. Becker, N. A. Olsson \& J. R. Simpson. (1999). ''\textit{Erbium-doped fiber amplifiers: fundamentals and technology }''. Luncent Technologies.
+
+\item[[10]] F. Digonnet, M. J. (1993). ''\textit{Rare- earth doped fiber lasers and amplifiers}''. (2a ed.). New York: Marcel Dekker, Inc.
+
+\item[[11]] C. J. Koester and E. A. Snitzer. ''\textit{Amplification in a fiber laser}''. Applied optics. Vol 3, no. 10, 1182, 1964.
+
+%\item[[2]] Azadeh, M. (2009). ''\textit{Fiber optics engineering}''. New York: Springer.
+
+\item[[12]] Ter-Mikirtychev, V. (2013). ''\textit{Fundamentals of Fiber Lasers and Fiber Amplifiers}''. Springer Publishing.
+
+%\item[[4]] Ajoy, G. \& K., Thyagarajan. ''\textit{Introduction to fiber optics}''. Cambridge: University Press.
+
+\item[[13]] R. I. Laming, J. E. Thowsend, D. N. Payne and others. IEEE Photon. technol. Lett. Vol. 3, 253, 1991.
+
+\item[[14]] K. Hinton, J. Lightwave Technol. Vol 15, 1411, 1997.
+
+\item[[15]] R. Olshansky. Electron Lett. Vol 3, 1363, 1988.
+
+\item[[16]] S. V. Chernikov, J. R. Taylor and R. Kashyap. Opt. Lett. Vol 20, 1586, 1995.
+
+\item[[17]] Desurvire, E. (2002). ''\textit{Erbium-doped fiber amplifiers: principles and applications}''. John Wiley and Sons, Inc.
+
+\item[[18]] R. I. Laming, S. B. Poole, and E. J. Tarbox. ''\textit{Pump excited state absortion in erbium-doped fibers}''. Opt. Lett. Vol. 13, 1084, 1988.
+
+\item[[19]] Cokrak, A. C \& Altuncu, A. ''\textit{Gain and noise figure performance of erbium doped fiber amplifier (EDFA)}''. Journal of electric and electronics engineering. Vol 4, No. 2, 1111-1112, 2004.
+
+
+
+%\item[[1]] Desurvire, E. (2002). ''\textit{Erbium-doped fiber amplifiers: principles and applications}''. John Wiley and Sons, Inc.
+
+%\item[[2]] Ter-Mikirtychev, V. (2013). ''\textit{Fundamentals of Fiber Lasers and Fiber Amplifiers}''. Springer Publishing. 
+
+\item[[20]] Ajoy, G. \& K., Thyagarajan. ''\textit{Lasers fundamentals and applications}''. (2a ed). Springer
+
+\item[[21]] Trager, F. (2007). ''\textit{Springer Handbook of Lasers and Optics}''. (1. ed.). Springer-Verlag.
+
+%\item[[5]] Ajoy, G. \& K., Thyagarajan. ''\textit{Introduction to fiber optics}''. Cambridge: University Press.
+
+\item[[22]] Sendra J. R. ''\textit{Conexiones de fibra óptica: uniones y acopladores}''. 
+
+\item[[23]] S. A. Cotrino and J. D. Jimenez. ''\textit{Análisis de funcionamiento de controlador manual de polarización}''. Departamento de Física, Universidad de los Andes. Bogotá D. C. Colombia
+
+\item[[24]] J. F. Lafortune and R. Vallee. ''\textit{Short length fiber Faraday rotator}''. Optics Communications. Vol. 86, 497-503, 1991.
+
+\item[[25]] D. J. Gauthier, P. Narum, and R. W. Boyd. ''\textit{Simple, compact, high-performance permanent magnet Faraday isolator}''. Optics Letters. Vol. 11, 623-625, 1986.
+
+%\item[[10]] Azadeh, M. (2009). ''\textit{Fiber optics engineering}''. New York: Springer.
+
+%\item[[11]] Kumar, S. \& Deen, M. J. (2014). ''\textit{Fiber optic communication systems}''. Reino Unido: John Wiley and Sons, Ltd.
+
+\item[[26]] A Yariv and P. yeh. ''\textit{Photonics}''. 6a ed. Oxford University Press. 2007.
+
+\item[[27]] E. E. Wooden, K. M. Kissa, A. Yi-Yan and others. IEEE J. Sel. Topics Quantum Electron. Vol. 6, 69, 2000
+
+%\item[[14]] F. Digonnet, M. J. (1993). ''\textit{Rare- earth doped fiber lasers and amplifiers}''. (2a ed.). New York: Marcel Dekker, Inc.
+
+\item[[28]] Svelto, O. (2009). ''\textit{Principles of Lasers}''. 5a ed. Springer.
+ 
+ \item[[29]] L. Y. y otros. ''\textit{Hihg-power high-speed photodetectors desing, analisys, and experimental demonstration}''. IEEE Transactions on microwave theory and techniques. Vol. 45, 1320-1331, 1997.
+ 
+ \item[[30]] A. R. Williams, A. L. Kellner and P. K. L. Yu. ''\textit{Dynamic range performance of high speed, high saturation InGaAs/LnP pin waveguide photodetector}''. Electronic Letters. Vol. 31, 548-549, 1995.
+ 
+ %\item[[31]] Agrawal, G. P. (1990). ''\textit{Fiber-optic communication systems}''. New York: John Wiley Sons, Inc.
+ 
+  \item[[31]]  S. Diaz and M. Lopez-Amo, \textit{''Dual-wavelength single-longitudinal-mode erbium fiber laser for temperature measurements''} Opt. Eng., vol. 53,
+pp. 036106-1-036106-3, Mar. 2014.
+
+\item[[32]] Camas Anzueto, J. y otros. \textit{''Caracterización de un amplificador de fibra óptica dopada con erbio con pulsos en función del tiempo''}. Revista mexicana de física, 50(1), 60-63, 2004.
+
+\end{itemize}
+

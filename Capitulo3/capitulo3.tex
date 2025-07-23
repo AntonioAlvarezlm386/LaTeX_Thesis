@@ -1,0 +1,360 @@
+%Capitulo 3
+
+\chapter{Láseres de fibra óptica}
+
+Si un amplificador óptico es provisto con retroalimentación, se tendrá un oscilador óptico o una fuente de radiación óptica coherente, es decir, un láser.\\
+Un dispositivo láser se define como una fuente de radiación óptica altamente monocromática. Comúnmente los láseres constan de tres partes: un medio activo, en el cual se da la inversión de la población y en consecuencia la amplificación óptica, un medio de bombeo, para suministrar energía al sistema. Adicionalmente se  requiere un mecanismo de retroalimentación para que la radiación se acumule.\\
+
+Los láseres de fibra dopada con Erbio (EDFLs), pueden considerarse como un EDFA operando en un régimen particular, donde ocurre una oscilación coherente de ASE debida a un mecanismo de retroalimentación de la señal óptica. Dicho de otra forma los EDFLs se usan como fuentes para la generación de señales de luz coherente, mientras que los EDFAs son usados para la regeneración de señales de luz coherente [17].\\
+
+El confinamiento óptico proporcionado por la fibra, combinado con las excelentes propiedades láser de los iones trivalentes de erbio, hacen que este tipo de láseres sean extremadamente eficientes. Pueden operar con umbrales extremadamente bajos, hasta 100 $\mu$W, con eficiencia de conversión óptica mayores al 50\%. Las numerosas transiciones láser disponibles de los iones de erbio, permiten emitir radiación óptica sobre un extenso espectro de longitudes de onda, con amplios rangos de afinación [12]. \\
+Además, debido a que el bombeo se mantiene en la fibra óptica, se pueden usar cavidades de varios metros sin preocuparse por la divergencia del haz de bombeo. No se dan problemas térmicos, debido a que la superficie de la fibra es muy grande y el calor se disipa fácilmente. La calidad del haz de salida es excelente, ya que es emitido como el modo fundamental de la fibra. 
+
+\section{El láser}
+La luz emitida de un dispositivo láser tiene características tales como: direccionalidad, monocromaticidad, alta potencia, así también, coherencia temporal, esto se refiere a la invariabilidad de las longitudes de onda, y coherencia espacial, es decir, las ondas emitidas conservan una diferencia de fase entre dos puntos en el espacio.\\
+Las fuentes ópticas con las características antes mencionadas se les conoce como fuentes coherentes de radiación, y las que no tienen estas propiedades se les conoce como fuentes incoherentes, ejemplo de esto son las lámparas, las cuales emiten sobre un extenso intervalo de longitudes de onda, sus fotones están desfasados con diferentes energías y frecuencias, y la propagación del haz se da en todas direcciones.\\
+
+Un láser consiste de al menos 3 partes (Figura \ref{Img:laser}):
+\begin{itemize}
+\item Un medio de ganancia, en el que se da la amplificación óptica mediante el proceso de emisión estimulada.
+\item Una fuente de bombeo, la cual crea la inversión de la población en el medio de ganancia. 
+\item Dos espejos que forman un resonador o una cavidad óptica donde la luz es atrapada, viajando de ida y vuelta entre los espejos.
+\end{itemize}
+El haz láser es generalmente una fracción del total de la radiación óptica oscilando en la cavidad, esta escapa mediante uno de los espejos, el cual es parcialmente reflejante. El medio activo puede ser un sólido (incluyendo semiconductores), un líquido o un gas, y la fuente de bombeo puede ser una descarga eléctrica, una lampara u otro láser. 
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.6]{Capitulo3/1_2.png}
+\caption{Esquema básico de un láser. [21]}
+\label{Img:laser}
+\end{figure}
+
+
+\section{Láseres de fibra óptica} 
+En un láser de fibra óptica, el medio activo que provee la amplificación es una fibra óptica dopada, generalmente con algún elemento perteneciente al grupo de tierras raras. Cuando a la fibra se le aplica bombeo mediante una fuente apropiada de radiación (generalmente otro láser), se alcanza la inversión de la población tal como se describió el capítulo anterior, entonces se da la amplificación óptica. Para generar la oscilación láser, se debe implementar un mecanismo de retroalimentación, es decir, se debe hacer una cavidad resonante.\\
+
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.475]{Capitulo3/1.1.png} 
+\caption{Esquema básico de un láser de fibra óptica. \textbf{(a)}  Cavidad lineal o Fabry-Perot y \textbf{(b)} cavidad de anillo. [12]} \label{Im:ring}
+\end{figure}
+
+Existen dos geometrías generalmente usadas para fabricar cavidades de fibra óptica (Figura \ref{Im:ring}); la cavidad lineal (o Fabry-Perot), que mantiene un perfil de onda estacionaria entre dos espejos que delimitan la cavidad, y la cavidad de anillo, dentro de la cual una onda progresiva unidireccional (usando un aislador) se propaga indefinidamente. \\
+La configuración de anillo (usada en el presente trabajo), es relativamente fácil de fabricar, en su forma más simple, se hace formando un  anillo con la fibra dopada y un acoplador. \\
+
+El bombeo se introduce al oscilador mediante el acoplador, el cual puede ser un WDM. Ya que la oscilación láser se da en ambas direcciones, su eficiencia de conversión se reduce incluso a la mitad; esta limitación se puede eliminar colocando un aislador en la cavidad, el cual solo permite operación unidireccional del resonador. Sin embargo, el aislador introduce una ligera atenuación, que se ve reflejada en el aumento del valor del umbral.\\
+Otros componentes se pueden agregar para ajustar los parámetros de salida según se requiera.\\
+
+\subsection{Cavidad de anillo}
+La física de un resonador láser de fibra óptica es similar a la de un resonador láser tradicional. La principal diferencia son los componentes que se integran en la cavidad y la geometría del medio activo. Además, el diámetro pequeño y la longitud larga de la fibra óptica, son responsables de efectos no lineales, que afectan al desempeño del resonador. \\
+Un resonador óptico, por tanto, es capaz de mantener ciertas configuraciones del campo electromagnético a ciertas frecuencias ópticas, tales configuraciones y sus correspondientes frecuencias se denominan \textbf{modos de la cavidad} y \textbf{frecuencias resonantes} respectivamente.\\
+Usando un aislador para permitir solo el viaje unidireccional del haz dentro de la cavidad, el pulso dentro del resonador se convierte en una onda viajera, a diferencia de un resonador lineal, el concepto de modo y frecuencia de la cavidad ya no se definen como la misma onda.\\
+
+Como en el caso de los resonadores lineales, las frecuencias de resonancia pueden obtenerse imponiendo la condición de que el cambio de fase a lo largo del la cavidad sea un múltiplo entero M de 2$\pi$, esta es la condición de interferencia constructiva, es decir, la señal debe mantenerse en fase consigo después de cada ciclo en la cavidad. La expresión para las frecuencias resonantes de los modos longitudinales (o axiales) esta dada por: 
+\begin{equation}
+v=M\frac{c}{nL}.
+\end{equation}
+
+Donde $L$ es la longitud de la cavidad, $c$ es velocidad de la luz en el vacio, $n$ el índice de refracción del material y $M$ es un entero. Los valores discretos definidos por esta relación definen los modos longitudinales del láser. Las frecuencias de estos modos están separados por el valor de la frecuencia fundamental, que se define como:
+\begin{equation}
+\Delta v=\frac{c}{nL}=\frac{1}{\tau_p}.
+\label{vfund}
+\end{equation}
+Donde  $\tau_p$ es la duración de un ciclo (\textit{round-trip time}).
+
+Cada uno de estos modos tiene una amplitud determinada por la ganancia del medio activo y por las perdidas.\\
+
+En un resonador láser, en cada ciclo del haz viajando por la cavidad, sufre amplificación, pero también sufre pérdidas. El punto en que la ganancia compensa las pérdidas, es llamado \textbf{condición de umbral} (\textit{threshold condition}). El valor del \textbf{umbral} y la \textbf{pendiente de eficiencia} son parámetros muy importantes a tener en cuenta. Estos reflejan no solo las propiedades de ganancia del medio activo sino que también, todas las pérdidas activas y pasivas de la cavidad. Estos valores dependen de los parámetros de la fibra y de los componentes de la cavidad. La máxima eficiencia se da cuando cada fotón de bombeo es usado para la acción láser, esta tendría un valor alrededor de 980/1550=63\% [20].\\
+En la práctica para que haya una emisión laser, se pasa por un proceso en el que inicialmente se genera emisión espontanea amplificada (ASE) (Figura \ref{Img:ASE}), es hasta que la energía sea significativa que se empieza a dar la emisión estimulada. Después del valor umbral, la potencia del láser incrementa linealmente con la potencia de bombeo. 
+
+
+\section{Régimen de operación de un láser de fibra}
+
+	\subsection{Régimen continuo} \label{sec:CW}
+	En régimen continuo, también llamado \textit{continuous wave} o CW, el láser es continuamente bombeado y oscila continuamente en uno o múltiples modos longitudinales. La oscilación láser es una combinación compleja de modos transversales y longitudinales, sin correlación de fase o amplitud. Por tanto, la intensidad del haz presenta un comportamiento aleatorio en el dominio del tiempo (Figura \ref{img:timefigure}).\\
+
+Los láseres generalmente tienden a oscilar en muchos modos. Esto debido a que la separación entre modos es generalmente muy pequeña en comparación al ancho de banda de ganancia del medio activo. En una fibra dopada con erbio, donde el ancho de banda de ganancia es de aproximadamente 40 nm alrededor de los 1550 nm, el correspondiente ancho de banda espectral es  de aproximadamente 5 THz.\\
+
+La Figura \ref{img:timefigure} muestra la imagen en el dominio del tiempo del haz de un láser operando en modo continuo, el cual consiste en una serie de pulsos aleatorios. A pesar de su aleatoriedad, ya que el pulso es la suma de N modos, los cuales están igualmente espaciados en frecuencia, la forma del pulso presenta algunas características como: (i) la forma de onda es periódica, con un periodo igual a $\tau_p=1/\Delta v$. (ii) Cada pulso tiene una duración $\Delta\tau_p$ aproximadamente igual a $1/\Delta v_L$ donde, $\Delta v_L=N\Delta v$, es el ancho de banda de oscilación.\\
+
+Para láseres con anchos de banda de ganancia relativamente grandes, se pueden obtener pulsos ultracortos, del orden de picosegundos o menos. Sin embargo, ya que la respuesta en el tiempo de los fotodetectores convencionales es generalmente mas larga que unos cuantos picosegunods, es imposible observar directamente este comportamiento en la salida de un láser, simplemente se monitorean los valores promedio.\\
+ 
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.425]{Capitulo3/7.pdf} 
+\caption{Comportamiento en el tiempo del haz de un láser de fibra operando en modo continuo. [20]}\label{img:timefigure}
+\end{figure}
+
+Para un ancho de banda de ganancia de $\Delta v_L$, centrado en la frecuencia $v_0$ y la diferencia en frecuencia entre cada modo es $c/nL$, el número de modos oscilando será aproximadamente
+\begin{equation} \label{eq:modos}
+N+1\approx1+ un\:numero\:entero\:cercano\:pero\:menor\:a\:\frac{\Delta v_L}{c/nL}.
+\end{equation}
+
+Este gran número de modos oscila independientemente, y sus fases se distribuyen aleatoriamente en un rango de $-\pi$ a $\pi$. Entonces, la intensidad de salida del láser, será la superposición de los modos
+\begin{equation}
+E(t)= \displaystyle \sum_{-N/2}^{N/2} A_n \: exp(2\pi iv_nt+i\phi_n).
+\end{equation}
+Donde $A_n$ y $\phi_n$ representan la amplitud y la fase del n-ésimo modo con frecuencia dada por:
+\begin{equation}
+v_n=v_0+n\delta v, \:donde\: n=-\frac{N}{2}, -\left(\frac{N}{2}+1\right),...,\frac{N}{2}.
+\end{equation}
+
+En general, para varios modos oscilando con diferentes frecuencias $v$,  amplitudes $A_n$ y diferentes fases $\phi_n$, la intensidad de la salida del láser queda definida por [20]:
+\begin{equation}
+\label{eq:Icw}
+I=K\vert E(t)^2 \vert = \left\vert  \sum_{n=-N/2}^{N/2} A_n\: exp(2\pi iv_nt+i\phi_n) \right\vert ^2
+\end{equation}
+donde $K$ representa una constante de proporcionalidad.
+
+
+	\subsection{Régimen pulsado mediante la técnica Mode-locked Activo}
+En muchas aplicaciones, es necesario tener una fuente láser pulsada. En principio, es posible generar pulsos a partir de un láser de onda continua, pero es mucho mas eficiente si es el láser el que emite los pulsos. En este caso, la energía de la inversión de la población es utilizada mas eficientemente. Hay dos técnicas estándar para lograr la operación pulsada de un láser: Q-switching y mode-locking (ML o amarre de modos). La primera es usada para generar pulsos con altas energías pero anchos de pulsos del orden de nanosegundos. Por otro lado, mediante mode-locked se pueden obtener pulsos ultracortos (del orden de femtosegundos) pero con menor energía. \\
+
+En la sección anterior (\ref{sec:CW}) se vio como es la intensidad de un haz laser en el dominio del tiempo, donde los modos oscilan sin correlación de fase. \\
+Si se considera un láser, en el que sus modos longitudinales tienen amplitudes iguales o parecidas, y además, oscilan con una relación definida entre sus fases,  tal láser se le denomina \textbf{mode-locked}, y al proceso mediante el cual se hace que sus modos oscilen con correlación de fase, se le llama \textbf{mode-locking}. En este caso, la intensidad de salida se puede ver como una serie de pulsos igualmente espaciados en el domino del tiempo.\\
+
+Si se considera el caso donde los modos tienen correlación de fase, tal que $\phi_n=\phi_0$, es decir, están en fase para un tiempo dado $t=0$. Para este caso, de la ecuación \ref{eq:Icw} tenemos que:\\
+\begin{equation}
+I=K \left\vert \sum_{n=-N/2}^{N/2} A_n\: exp(2\pi iv_nt) \right\vert ^2.
+\end{equation}\\
+
+Si además se considera que todos los modos tienen la misma amplitud, es decir, $A_n=A_0$, entonces se tiene:
+\begin{equation}
+I=I_0 \left\vert \sum_{n=-N/2}^{N/2} \: exp(2\pi iv_nt) \right\vert ^2.
+\end{equation}\\
+
+Donde $I_0=KA_0^2$ es la intensidad de cada modo. Esta suma puede evaluarse, y se obtiene [20]:
+\begin{equation}
+\label{eq:Iml}
+I=I_0 \left\lbrace \frac{sin[\pi (N+1)\delta vt]}{sin[\pi\delta vt]} \right\rbrace ^2.
+\end{equation}\\
+
+La intensidad en el dominio del tiempo dado por la ecuación \ref{eq:Iml} se presenta en la Figura \ref{img:ml}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.35]{Capitulo3/8.png} 
+\caption{Comportamiento en el tiempo de la salida de un láser pulsado mediante la técnica mode-locked. [20]}\label{img:ml}
+\end{figure}
+
+\subsubsection{Técnicas para generación de pulsos mediante mode-locked}
+
+En la práctica, los métodos para generar pulsos mediante mode-locked se dividen en dos categorías: (1) \textbf{mode-locking activo} (usado en el presente trabajo), en el cual, el elemento que genera los pulsos es controlado mediante una fuente externa, (2) \textbf{mode-locking pasivo}, en el cual, el elemento que genera los pulsos se introduce en la cavidad, y funciona gracias a algún efecto no lineal, por ejemplo un absorbedor saturable. 
+
+Existen tres tipos de mode-locking activo, clasificados según el método que se use para la generación de pulsos. (1) Inducido mediante un modulador de amplitud (\textit{AM mode-locking}). (2) Inducido mediante un modulador de fase (\textit{FM mode-locking}). (3) Inducido mediante la modulación de la ganancia del láser, a una tasa de repetición igual a frecuencia fundamental de la cavidad $\Delta v=c/nL$ (\textit{ML por bombeo sincronizado}). \\
+
+A continuación se aborda la técnica de modulación de amplitud, ya que es la utilizada en el desarrollo experimental del presente trabajo.\\
+
+Para el desarrollo de este método, generalmente se usa un modulador electro-óptico para láseres de alta ganancia o un modulador acusto-óptico para láseres de baja ganancia.\\
+El modulador varía las pérdidas de la cavidad $\gamma (t)$ a cierta frecuencia de modulación $v_m$. Se espera entonces, que un pulso pase por el modulador en un tiempo $t_1$ en el momento en que la pérdida inducida $\gamma (t)$ es mínima (ver Figura \ref{img:AM}). Ya que el pulso pasa por el modulador en los tiempos $t_2=t_1+\tau_p$, $t_3=t_2+\tau_p$, etc, se puede alcanzar un régimen pulsado estable cuando se satisface la condición $\Delta v=v_m$. 
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.3]{Capitulo3/9.png}
+\caption{Esquemático de la técnica mode-locking activo, mediante modulación de amplitud (AM). [21]} \label{img:AM}
+\end{figure}
+
+
+
+Hay que notar que al usar la técnica de AM, incluso una desafinación pequeña de la frecuencia $v_m$ con respecto al valor $\Delta v$ puede extinguir la operación en régimen pulsado. En la práctica, un error $\vert v_m-\Delta v\vert /v_m$ del orden de $10^{-4}$ es suficiente para impedir que el láser opere en régimen mode-locked [21]. Debido a esto, se debe tener un muy buen control de estos parámetros, incluso de la longitud de la cavidad, especialmente cuando son cavidades muy grandes, como en los láseres de fibra óptica.
+
+\section{Descripción de los elementos del láser de fibra óptica}
+	\subsection{Fuente de bombeo}
+A pesar de la gran cantidad de fuentes ópticas, en fibras ópticas generalmente se usan láseres de semiconductor, tales como diodos emisores de luz o diodos láser. \\
+Como se describió en la Sección 2.3, las longitudes de onda mas eficientes, de acuerdo al espectro de absorción del ion Er$^{+3}$ son 980 y 1480 nm. Esto impulsó el desarrollo de los láseres de semiconductor a estas longitudes de onda. \\
+
+En su forma mas simple, un láser de semiconductor consiste en una union $p-n$ en polarización directa, formado en un semiconductor de banda prohibida directa. La recombinación de cargas (llamadas electrones y huecos) introducidas en la unión, resulta en la emisión de fotones. Un láser de semiconductor, es una cavidad Fabry-Perot. Las dimensiones típicas de la sección de semiconductor en un diodo láser se muestran en la Figura  \ref{Img:SLesq} (b). Cuando la corriente excede el valor umbral, la ganancia óptica del resonador debido a las emisiones estimuladas superan a las perdidas, provocando la oscilación láser y por tanto, la emisión de radiación.\\
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.425]{Capitulo3/6.png}
+\caption{Imagen ilustrativa de un láser de semiconductor. \textbf{(a)} Esquema simple y \textbf{(b)} sus dimensiones típicas. [8]}
+\label{Img:SLesq}
+\end{figure}
+Los diodos láser de bombeo para uso en fibras ópticas, son diseñados con un  empaque de mariposa, con 14 pines. Son soldados con una fibra monomodo integrada. Este empaque herméticamente sellado provee protección ambiental y mecánica para el diodo láser y la región de acoplamiento a la fibra. Los pines entregan corriente al láser y a un enfriador termoeléctrico. Un fotodiodo monitor, situado en la parte posterior se incluye para proveer una medida de la salida de potencia del láser.
+
+
+	\subsection{Acoplador WDM}
+	Las siglas WDM (Wavelength Division Multiplexing) significan multiplexación por división de onda, es una tecnología que permite combinar varias señales ópticas con distintas longitudes de onda, en una misma fibra óptica sin interferirse entre si. Estos dispositivos generalmente son bidireccionales, se pude dividir una señal en varias longitudes de onda o se puede unir diferentes longitudes de onda en una misma señal.
+En un láser de fibra óptica este dispositivo se usa para reinsertar la señal de retroalimentación a la cavidad láser. Se combina la señal de bombeo a 980 nm y la señal de retroalimentación a 1550 nm.
+	\subsection{Acoplador}
+ Un acoplador de fibra óptica es un dispositivo que puede distribuir la señal óptica de
+una fibra entre dos o más fibras, además, puede ser utilizado de manera recíproca, es decir,
+combinar dos señales ópticas de dos o más fibras a una sola fibra óptica. La distribución de
+una señal puede ser simétrica (igual potencia por cada puerto) o asimétrica (distinto valor
+de potencia). La potencia se transfiere por uno de estos métodos [22]:
+
+\begin{itemize}
+\item A través del núcleo de la fibra mediante la unión de varios núcleos al primario.
+\item A través de un eje perpendicular a la fibra mediante la conversión de modos guiados
+por el núcleo en modos que escapan del núcleo y pueden pasar a otras fibras a través
+de una interacción superficial.
+\end{itemize}
+
+
+	\subsection{Controlador de polarización (PC)}
+	Este dispositivo permite controlar el estado de polarización de la luz que viaja por la cavidad de fibra óptica.
+	La configuración habitual de este dispositivo, son dos placas de $\lambda$/4 (QWP, Quater Wavelength Plate) y una placa de $\lambda$/2 (HWP, Half Wavelegth Plate).\\
+	El controlador de polarización usa birrefringencia inducida por tensión para crear tres fracciones independientes de ''placas retardadoras'' para alterar la polarización de la luz transmitida en una fibra monomodal, es decir, la fibra es enrollada en tres carretes independientes , cada uno constituye una placa de retardo de fase. Cabe mencionar que la birrefringencia deseada es inducida por las vueltas de la fibra, no por torsión de las placas. El eje rápido de la fibra, el cual es el plano del carrete, es ajustado con respecto al vector de transmisión de polarización mediante rotación manual de los carretes [23].\\
+	 Esta birrefringencia está en función del diámetro de la placa, número de vueltas, el diámetro de la fibra óptica utilizada y la longitud de onda de operación. El retardo $\rho$ generado en cada placa está dado por las siguientes ecuaciones [23]:
+	 \begin{equation}
+	 \rho(radianes)=\frac{2\pi^2aNd^2}{\lambda D}.
+	 \end{equation}
+	 \begin{equation}
+	 \rho(numero \: de \: onda)=\frac{\pi aNd^2}{\lambda D}.
+	 \end{equation}
+Donde $a$ es una constante (0.133 para fibras de silicio), $N$ es el número de vueltas en cada placa, $d$ es el diámetro del núcleo, $\lambda$ es la longitud de onda de operación, y $D$ es el diámetro de cada placa.
+	 
+	 
+	\subsection{Aislador}
+	Mientras la luz viaja por la fibra y los conectores, hay una alta posibilidad de que se de reflexión en sentido contrario. Estas reflexiones generalmente suceden cuando la luz pasa a través de una interfaz perpendicular a la dirección de propagación de la luz. Algunos ángulos en las interfaces pueden reducir estas reflexiones. Generalmente no se tiene control sobre estas uniones, y es necesario reducir los efectos de la luz que se contrapropaga, para cuidar los dispositivo usados y mejorar el rendimiento del dispositivo de fibra en cuestión. En estos casos, se usa un aislador para disminuir cantidad de luz reflejada en el arreglo de fibra.\\
+	
+	Los aisladores, generalmente trabajan gracias al principio de rotación de la polarización de la luz debido a un rotador de Faraday, que funciona gracias al efecto Faraday, el cual demuestra que la polarización de la luz es afectada en función del campo magnético del medio que atraviese [24, 25]. Como se muestra en la Figura \ref{Iso}, un aislador consiste en dos polarizadores, colocados con un ángulo de 45° uno con respecto al otro, con un rotador de Faraday entre estos.
+ 	\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.5]{Capitulo3/1.png}
+	\caption{Esquema de un aislador. [3]}
+	\label{Iso}
+	\end{figure}
+	
+Considerando un pulso de luz $P_1$ (Figura \ref{Iso}), el cual se propaga de izquierda a derecha, después de pasar por el polarizador 1, la luz estará polarizada verticalmente. Después, la luz entra al rotador de Faraday, el cual está permeado por un campo magnético externo, generalmente debido a un imán permanente. Para esta aplicación, la longitud del rotador de Faraday, es tal que el plano de polarización rote 45°. Entonces, una vez que el haz de luz $P_1$ atraviesa el rotador, su plano de polarización ha rotado 45°. En consecuencia, $P_1$ puede pasar a través del polarizador 2 con con mínima atenuación, ya que está con una inclinación de 45° con respecto al primero. Dado este arreglo, la luz puede propagarse de izquierda a derecha, con relativamente poca atenuación.\\
+
+Si se considera un pulso $P_2$, viajando de derecha a izquierda. Una vez que pasa por el polarizador 2, estará polarizada a 45°. Luego pasa a través del rotador de Faraday, siendo rotada otros 45°, el pulso $P_2$ ahora tiene un plano de rotación horizontal, es decir, su plano de polarización es perpendicular al polarizador 1. Debido a esto, el pulso es absorbido casi completamente por el polarizador 1, y solo una pequeña fracción pasa a través del sistema, es decir, la luz viajando de derecha a izquierda es casi completamente atenuada. \\
+Generalmente los aisladores pueden proveer alrededor de 40 dB aislamiento, con inserción de perdidas alrededor de 1 dB.  
+
+	\subsection{Empalmes de fibra óptica}
+	Un conector de fibra es una forma de unir dos fibras temporalmente, además de insertar altas perdidas. Sin embargo, si se requiere unir dos fibras permanentemente, y ademas, reducir las perdidas en el sistema, se recurre a la técnica de empalme.\\
+	Los empalmes de fibra se dividen en dos categorías, empalme mecánico o por fusión. Para el presente trabajo se ha usado empalme por fusión, el cual, esencialmente consiste en soldar los extremos de las fibras. Los extremos de la fibra, deben estar limpios y correctamente cortados. Generalmente se usa una maquina empalmadora, la cual alinea perfectamente los extremos de fibra antes de soldarlos, la unión se hace aplicando calor mediante un arco eléctrico (Figura \ref{FSP}). La principal ventaja del empalme por fusión es el mejor alineamiento de las fibras y menores perdidas, es posible obtener empalmes con perdidas menores a 0.02 dB. 
+	
+	\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=0.45]{Capitulo3/2.png}
+	\caption{Empalme de fibra por fusión. [3]}
+	\label{FSP}
+	\end{figure}
+	
+Los equipos de empalme por fusión son relativamente caros, pero fáciles de operar y casi totalmente automáticos. 
+	
+\subsection{Modulador electro-óptico}  \label{sec:3.3.7}
+Un modulador electro-óptico (EOM, del ingles \textit{Electro-Optic Modulator}) puede usarse para controlar eléctricamente, la amplitud, fase, frecuencia, polarización o dirección de propagación de la luz. \\
+EOMs en general, consisten en un material electro-óptico contenido entre un par de electrodos en forma de placas. Un voltaje aplicado a estos electrodos genera un campo eléctrico orientado comúnmente perpendicular a la superficie de los electrodos. Dicho campo, induce cambios en la estructura u orientación del material, y en consecuencia, el índice de refracción o la birrefringencia  del material son modulados por el campo eléctrico.\\
+
+En particular, cuando un campo eléctrico es aplicado en un cristal electro-óptico, el indice de refracción del cristal cambia y, por tanto, la fase (\textbf{$\propto$} índice de refracción) de una señal óptica propagándose en el cristal también cambia. El cambio en el índice de refracción es directamente proporcional a la intensidad del campo eléctrico aplicado [26]. Este efecto es conocido como efecto \textit{pockels} o efecto \textit{electro-óptico lineal}.\\
+
+Si se considera la propagación de la luz en un cristal de LiNbO$_3$, como el mostrado en la Figura \ref{LiNbO}. Sea $E$ la intensidad del campo eléctrico debido a un voltaje aplicado a los electrodos y una onda óptica propagándose a lo largo del eje $x$, con con una polarización paralela al eje z. La dependencia del índice de refracción en la intensidad reflectiva del campo esta dada por [26]:
+
+\begin{equation}
+n=n_0-\frac{1}{2}n_0^3r_{33}E_z.
+\label{eq:n}
+\end{equation}
+
+
+Donde $n_0$ es el indice de refracción en ausencia del campo eléctrico aplicado, y $r _{33}$  es el coeficiente electro-óptico lineal o coeficiente de Pockels. Si $V$ es el voltaje aplicado, y $d$ es el espesor del cristal, la componente z de la intensidad del campo eléctrico es:
+
+\begin{equation}
+E_2=V/d.
+\label{eq:E}
+\end{equation}
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.45]{Capitulo3/3.png}
+\caption{Modulación de fase en un cristal de LiNbO$_3$. [7]}
+\label{LiNbO}
+\end{figure}
+
+
+Sea el campo óptico de una onda incidente: 
+
+
+\begin{equation}
+\psi(t,0)\equiv\psi_{in}(t)=A_0 exp(-i2\pi f_ct).
+\end{equation}
+Usando las ecuaciones \ref{eq:n} y \ref{eq:E}, la onda a la salida del cristal es: 
+
+
+\begin{equation}
+\psi_{in}(t,L)=A_0 exp[-i(2\pi f_ct-\phi)].
+\label{eq:psi}
+\end{equation} 
+Donde
+
+
+\begin{equation}
+\phi=\frac{2\pi}{\lambda_0}nL=\frac{2\pi L}{\lambda_0}\left(n_0-\displaystyle \frac{n_0^3r_{33}V}{2d}\right)=\phi_0-\Delta\phi.
+\end{equation}
+Aquí, $\phi_0$ es el cambio de fase constante en ausencia del voltaje aplicado, $L$ es la longitud del cristal, y 
+
+
+\begin{equation}
+\Delta\phi=\displaystyle \frac{\pi Ln_0^3r_{33}V_{\pi}}{\lambda_0d}.
+\end{equation}
+Este es el cambio de fase. El voltaje requerido para alcanzar un cambio de fase igual a $\pi$, es conocido como voltaje de media-onda o voltaje de conmutación $V_{\pi}$, y está dado por:
+
+
+\begin{equation}
+\Delta\phi=\pi=\displaystyle \frac{\pi Ln_0^3r_{33}V_{\pi}}{\lambda_0d}  o  V_{\pi}=\displaystyle \frac{\lambda_0}{n_0^3r_{33}} \frac{d}{L}.
+\label{eq:Delta}
+\end{equation}
+
+
+Sustituyendo la Ecuación \ref{eq:Delta} en la Ecuación \ref{eq:psi}, se obtiene:
+
+\begin{equation}
+\psi_{in}(t,L)=A_0exp \left[-i\left(2\pi f_ct-\phi_0+\frac{\pi V}{V_{\pi}}\right)\right].
+\end{equation}
+
+
+Entonces, puede verse que el cambio de fase es directamente proporcional al voltaje aplicado. Si $V(t)$ es un mensaje codificado en en una señal eléctrica, la fase de la portadora óptica cambiará en concordancia con la señal del mensaje. Por ejemplo, si $V(t)=V_\pi$, en un pequeño intervalo $0<t<T_b$, la señal de la portadora sufrirá un cambio equivalente a $\pi$ durante un tiempo T. Cuando $V(0)=0$, ningún cambio de fase será provocado.\\
+\subsubsection{Modulación de intensidad}
+La modulación de intensidad se logra alterando la transmisión de la luz, que se define como la razón de intensidad entre la salida y la entrada, $T=I_0/I_i$. Como la modulación o el retardo de fase no afecta la intensidad de la salida, es necesario agregar un elemento o configuración adicional. \\
+
+Una de la opciones, es superponer las ondas de las ramas de un \textbf{interferómetro tipo Mach Zehnder} (MZ), en el cual, al menos uno de las ramas contiene un modulador de fase (Figura \ref{Mod}). En ausencia de voltaje externo, las señales ópticas en los dos brazos del modulador MZ, experimentan los mismos cambios de fase, e interfieren constructivamente. Al introducir un cambio de fase en uno de los brazos cambiando el indice de refracción mediante un voltaje inducido, termina con la interferencia constructiva y reduce la intensidad a la salida del modulador. En particular, nada de luz es transmitida cuando la diferencia de fase entre los dos brazos del modulador es $\pi$ rad, debido a que con esta condición se da interferencia destructiva total. En consecuencia, un tren de pulsos eléctricos aplicado al modulador, genera una réplica de pulsos ópticos.\\
+
+\begin{figure}[hbtp] 
+\centering
+\includegraphics[scale=0.425]{Capitulo3/4.png}
+\caption{Esquema de un modulador Mach-Zehnder. [7]}
+\label{Mod}
+\end{figure}
+
+Suponiendo que el haz de la señal óptica en la entrada, se divide igualmente en ambas ramas del interferometro, la intensidad en la salida depende de la diferencia de fase $\phi$ entre las dos ramas:
+
+\begin{equation}
+I_0=\frac{1}{2}I_i+\frac{1}{2}I_icos(\varphi)=I_icos^2\left(\frac{\varphi}{2}\right).
+\end{equation}
+
+Considerando la expresión para el voltaje de conmutación (Ec. \ref{eq:Delta}), para el cambio de fase, la transmitancia es  una función periódica de V.
+
+\begin{equation}
+T(V)=cos^2\left(\frac{\varphi_0}{2}-\frac{\pi}{2}\frac{V}{V_{\pi}}\right).
+\end{equation}
+
+El valor de $\varphi_0$ depende de la diferencia de los caminos ópticos cuando no se ha aplicado voltaje. Un valor de $\pi/2$, es usado para operar el modulador en una región casi lineal alrededor de $T=1/2$. Si el modulador cambia entre transmisión  completa y extinción total, $\varphi_0$ se puede usar para seleccionar entre $V=0$ o $V=V_\pi$, corespondiendo a $T=0$ y $T=1$.\\
+
+El rendimiento de un modulador externo se puede cuantificar mediante dos parámetros: la relación de encendido-apagado (también llamado relación de extinción) y el ancho de banda de modulación. Los moduladores de LiNbO$_3$ modernos, alcanzan relaciones de encendido-apagado superiores a 20 y pueden modular a frecuencias de 75 GHz [27]. El voltaje de operación típico es de 5V. \\[0.5cm]
+
+\subsection{Fotodetector PIN}
+Actualmente existe una gran variedad de fotodetectores, cada uno con características propias para diferentes propósitos. En fibras ópticas, se usan principalmente dos tipos: diodos tipo PIN o tipo APD ( \textit{Avalanche Photo-Diode}).  Las principales ventajas son su tamaño, costo, voltaje de operación, capacidad de operación, fiabilidad e integración con otros componentes optoelectronicos.\\[0.5cm]
+
+El mas extensamente usado, es el que usa una unión $p-i-n$ (PIN) inversamente polarizada [29, 30]. Como se puede ver en la Figura \ref{img:PINPh}, este tipo de fotodetector consiste en dos semiconductores, un tipo $p$ y un tipo $n$, separados por una sección $i$, de material intrínseco, el cual es un semiconductor mínimamente dopado. La unión es polarizada inversamente por una fuente externa. El voltaje de polarización, $V_s$, se establece casi por completo en la región intrínseca, esto es por que en la región intrínseca casi no hay cargas libres, por tanto, tiene una resistencia muy grande comparada con las secciones de material tipo $p$ y $n$. Como resultado, se forma un fuerte campo eléctrico en esta región.\\
+
+Cuando los fotones inciden en esta región, provocan que los electrones de la banda de valencia salten a la banda de conducción, dejando cargas positivas, o huecos detrás. Entonces, una corriente de cargas fotogeneradas es creada en la región intrínseca. Debido al campo eléctrico que existe en esta región, las cargas se mueven hacia la sección tipo $n$, y los huecos hacia la región tipo $p$. Esto genera una \textit{fotocorriente} en el circuito.\newpage
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.425]{Capitulo3/5.png}
+\caption{Diagrama de energía y esquemático de un photodetector tipo PIN. [3]}
+\label{img:PINPh}
+\end{figure}
+
+La eficiencia de un fotodetector está dada por su capacidad de respuesta, la cual se puede expresar en términos de cantidades mensurables, como:
+
+\begin{equation}
+\rho=\frac{I}{P}
+\end{equation}
+
+donde $I$ es la fotocorriente, $P$ es la potencia óptica incidente y $\rho$ tiene unidades de A/W.
